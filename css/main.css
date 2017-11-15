@@ -1,0 +1,335 @@
+
+html, body{
+	height: 100%;
+	overflow: hidden;
+}
+
+h1, h2, p{
+	text-shadow: 0 0 2rem #474747;
+}
+
+.background{
+	width: 100%;
+	height: 100%;
+}
+
+img{
+	width: 100%;
+}
+
+.logo_bottom{
+	width: 30%;
+	position: absolute;
+	bottom: 4%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: .80;
+}
+
+body{
+	height: 100%;
+	position: relative;
+	font-family: 'Poppins', sans-serif;
+}
+
+.open-settings{
+	position: absolute;
+	top: 3%;
+	right: 3%;
+	background-color: #212121;
+	font-size: 1rem;
+	color: #fff;
+	padding: .5rem 1rem;
+	line-height: 2rem;
+	text-decoration: none;
+	border-radius: 100%;
+}
+
+/*Search Bar*/
+
+.close-settings{
+	position: absolute;
+	top: 3%;
+	right: 3%;
+	font-size: 1.5rem;
+	color: #fff;
+	padding: .5rem;
+	line-height: 2rem;
+	text-decoration: none;
+	z-index: 9999;
+}
+
+input[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-size: 1rem;
+    background-color: white;
+    background-image: url('../img/searchicon.png');
+    background-position: 3%; 
+    background-repeat: no-repeat;
+    padding: .75rem 1.25rem .75rem 2.75rem;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
+.settings{
+	background-color: rgba(0,0,0,.8); 
+	background-position: top right;
+	background-size: 130%;
+	background-repeat: no-repeat;
+	width: 100%;
+	position: fixed;
+	z-index: 9997;
+}
+
+.overlay{
+	width: 100%;
+    height: 100%;
+	position: fixed;
+	top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+	background-color: rgba(0,0,0,.6);
+	z-index: 2;
+}
+
+form{
+	width: 100%;
+	position: absolute;
+	bottom: 15%;
+	left: 10%;
+
+}
+
+form div{
+	float: left;
+}
+
+button{
+	background-color: #e2e2e2;
+	border-radius: 10px; 
+	font-size: 1rem;
+	color: #666666;
+	padding: .3rem .5rem;
+	margin: .4rem .75rem;
+	line-height: 2rem;
+}
+
+label{
+	color: #ffffff;
+	font-size: 1.5rem;
+}
+
+p{
+	margin: 5px;
+	color: #717171;
+}
+
+h1{
+	margin: 0;
+}
+
+.current-top{
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+	width: 100%;
+}
+
+.location{
+	margin: 0; 
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1.5rem;
+
+}
+
+.temperature{
+	margin: 0;
+	font-size: 7rem;
+	line-height: 7rem;
+	color: #fff;
+	font-weight: 400;
+}
+
+.condition{
+	margin: 0; 
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+
+.current-bottom{
+	overflow: hidden;
+	position: absolute;
+	bottom: 40%;
+	width: 100%;
+}
+
+.humidity, .wind, .highlow{
+	float: left;
+	text-align: center;
+	width: 30%;
+	margin: 0 0 0 3%; 
+	color: #fff;
+	font-size: 1.2rem; 
+}
+
+span{
+	display: block;
+	font-size: 1.7rem;
+	text-align: center;
+}
+
+.forecast{
+	position: absolute;
+	bottom: 10%;
+	width: 100%;
+}
+
+.days{
+	float: left;
+	text-align: center;
+	padding: 0 1.5%;
+	width: 21%;
+}
+
+.next_day{
+	margin: 0;
+	font-size: 1.7rem;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+a{
+	color: #fff;
+	font-size: 5rem;
+	line-height: 3rem;
+	text-align: center;
+}
+
+.next_temp{
+	color: #fff;
+	font-size: 1.2rem;
+	line-height: 3rem;
+}
+
+.days:nth-child(1), .days:nth-child(2),.days:nth-child(3){
+	border-right: .09rem #fff solid;
+}
+
+@media screen and (min-width: 20rem){
+	*{
+		font-size: 80%;
+	}
+}
+@media screen and (min-width: 23rem){
+	*{
+		font-size: 100%;
+	}
+}
+
+@media screen and (min-width: 30rem){
+	*{
+		font-size: 120%;
+	}
+}
+
+@media screen and (min-width: 37.5rem){
+	*{
+		font-size: 135%;
+	}
+}
+
+/*JavaScript */
+
+.js-hide {
+	display: none;
+}
+
+.js-bounceIndown {
+	animation: BounceIndown 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes BounceIndown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 1;
+    height: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+  	height: 17%;
+    transform: none;
+  }
+
+}
+
+.js-bounceOutup {
+	animation: BounceOutup 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes BounceOutup {
+	0% {
+		height: 17%;
+	}
+	20% {
+    	transform: translate3d(0, -10px, 0);
+	}
+
+	40%, 45% {
+    	transform: translate(0, 20px, 0);
+	}
+
+	to {
+		height: 0;
+    	transform: translate3d(0, -500px, 0);
+	}
+} 
+
+.overlayOn {
+	animation: overlay;
+	animation-fill-mode: forwards;
+}
+
+@keyframes overlay {
+	0% {
+		display: none;
+	}
+
+	100% {
+		display: block;
+	}
+}
+

@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html class="no-js" lang="">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+        <title>Climate Daily</title>
+    
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/weatherfonts.css">
+        <link rel="stylesheet" href="css/main.css">
+
+
+        <! – – For Icons – – >
+        <link rel="manifest" href="/manifest.json">
+
+        <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+        <link href="img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+        <link href="img/apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167" />
+        <link href="img/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+        <link href="img/icon-hires.png" rel="icon" sizes="192x192" />
+        <link href="img/icon-normal.png" rel="icon" sizes="128x128" />
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet">
+    
+        <script src="https://use.fontawesome.com/e8390c9bbc.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    
+    </head>
+
+    <body>
+        <nav>
+            <a class="open-settings" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+        </nav>
+
+        <section class="settings">
+            <a class="close-settings" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <form>
+                <div>
+                    <label for="locale"></label>
+                    <input type="text" class="locale" id="locale" name="locale" placeholder="Enter Location" />
+                </div>                  
+                <div>
+                    <button class="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <div id="weather"></div>
+
+        <script src="js/vendor/reallysimpleweather-1.1.0.min.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+
+</html>
