@@ -236,11 +236,6 @@ a{
 		font-size: 80%;
 	}
 }
-@media screen and (min-width: 23rem){
-	*{
-		font-size: 100%;
-	}
-}
 
 @media screen and (min-width: 30rem){
 	*{
